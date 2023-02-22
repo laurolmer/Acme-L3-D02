@@ -24,7 +24,7 @@ public class Student extends AbstractRole {
 	// Attributes -------------------------------------------------------------
 	@NotBlank
 	@Length(max = 75)
-	protected Integer			statement;
+	protected String			statement;
 
 	@NotBlank
 	@Length(max = 100)
