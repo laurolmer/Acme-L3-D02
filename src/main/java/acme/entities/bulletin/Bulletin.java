@@ -1,9 +1,11 @@
 
 package acme.entities.bulletin;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
@@ -22,7 +24,8 @@ public class Bulletin extends AbstractEntity {
 	protected static final long	serialVersionUID	= 1L;
 
 	@Past
-	protected LocalDate			moment;
+	@Temporal(TemporalType.TIME)
+	protected Date				moment;
 
 	@NotBlank
 	@Size(max = 101)
@@ -32,7 +35,7 @@ public class Bulletin extends AbstractEntity {
 	@Size(max = 101)
 	protected String			message;
 
-	protected boolean			critical;
+	protected CriticalType		critical;
 
 	@URL
 	protected String			optionalLink;
