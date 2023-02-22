@@ -1,12 +1,12 @@
 
 package acme.roles;
 
+import java.util.ArrayList;
+
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Length;
-
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractRole;
@@ -16,31 +16,24 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Company extends AbstractRole {
+public class Student extends AbstractRole {
 
 	// Serialisation identifier -----------------------------------------------
-
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-
 	@NotBlank
 	@Length(max = 75)
-	protected String			name;
-
-	@NotBlank
-	@Length(max = 21)
-	protected Integer			VAT;
+	protected String			statement;
 
 	@NotBlank
 	@Length(max = 100)
-	protected Integer			summary;
+	protected ArrayList<String>	strongFeatures;
+
+	@NotBlank
+	@Length(max = 100)
+	protected ArrayList<String>	weakFeatures;
 
 	@URL
 	protected String			link;
-
-	// Derived attributes -----------------------------------------------------
-
-	// Relationships ----------------------------------------------------------
-
 }
