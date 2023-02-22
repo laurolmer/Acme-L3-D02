@@ -8,7 +8,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Past;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.Length;
 
 import org.hibernate.validator.constraints.URL;
 
@@ -32,7 +32,7 @@ public class Bulletin extends AbstractEntity {
 	protected String			title;
 
 	@NotBlank
-	@Size(max = 101)
+	@Length(max = 101)
 	protected String			message;
 
 	protected CriticalType		critical;
