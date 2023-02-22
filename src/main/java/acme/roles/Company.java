@@ -23,15 +23,15 @@ public class Company extends AbstractRole {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@Size(max = 76)
+	@Length(max = 76)
 	protected String			name;
 
 	@NotBlank
-	@Size(max = 26)
+	@Length(max = 26)
 	protected Integer			VAT;
 
 	@NotBlank
-	@Size(max = 101)
+	@Length(max = 101)
 	protected Integer			summary;
 
 	@URL
