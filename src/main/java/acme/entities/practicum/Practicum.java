@@ -1,13 +1,17 @@
 
 package acme.entities.practicum;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
@@ -23,33 +27,35 @@ import lombok.Setter;
 public class Practicum extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
-	protected static final long		serialVersionUID	= 1L;
+	protected static final long				serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
-	protected String				code;
+	protected String						code;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String				title;
+	protected String						title;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String				abstractt;
+	protected String						abstractt;
 
 	@NotBlank
 	@Length(max = 100)
-	protected ArrayList<String>		goals;
+	protected ArrayList<String>				goals;
 
-	protected Integer				estimedTotalTime; // computed from sessions plus/minus 10%
+	@NotNull
+	@Temporal(TemporalType.TIME)
+	protected Time							estimedTotalTime; // computed from sessions plus/minus 10%
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
 
 	@OneToMany(mappedBy = "practicum")
-	private List<SessionsPracticum>	sessionsPracticum;
+	private static List<SessionsPracticum>	sessionsPracticum;
 
 }
