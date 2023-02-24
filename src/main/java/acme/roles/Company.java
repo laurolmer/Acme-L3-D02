@@ -5,10 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Length;
-
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractRole;

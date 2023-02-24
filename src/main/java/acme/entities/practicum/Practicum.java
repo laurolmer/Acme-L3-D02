@@ -1,8 +1,8 @@
 
 package acme.entities.practicum;
 
-import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -51,7 +51,7 @@ public class Practicum extends AbstractEntity {
 
 	@NotNull
 	@Temporal(TemporalType.TIME)
-	protected Time							estimedTotalTime; // computed from sessions plus/minus 10%
+	protected Date							estimedTotalTime; // computed from sessions plus/minus 10%
 
 	// Derived attributes -----------------------------------------------------
 

@@ -1,57 +1,59 @@
 
-package acme.entities.sessionsPracticum;
+package acme.entities.banner;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.practicum.Practicum;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity(name = "sessionsPracticum")
+@Entity(name = "banenr")
 @Getter
 @Setter
-public class SessionsPracticum extends AbstractEntity {
+public class Banner extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
-	private static final long	serialVersionUID	= 1L;
+	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
+
+	@NotNull
+	@Past
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				updatee;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP) //a display period (must start at any moment after the instantiation/update 
+	protected Date				moment;			//moment and must last for at least one week)
+
+	@NotNull
+	@URL
+	protected String			imgLink;
+
 	@NotBlank
 	@Length(max = 75)
-	protected String			title;
-
-	@NotBlank
-	@Length(max = 100)
-	protected String			abstractt;
+	protected String			slogan;
 
 	@NotNull
-	@Temporal(TemporalType.DATE)
-	protected Date				startDate;
-
-	@NotNull
-	@Temporal(TemporalType.DATE)
-	protected Date				finishDate;
-
 	@URL
-	protected String			link;
+	protected String			docLink;
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
 
-	@Valid
-	@ManyToOne()
-	private Practicum			practicum;
+	//@Valid
+	//@ManyToOne()  //A banner allows administrators to advertise products, services, or organizations.
+	//private static Banner banner;
+
 }
