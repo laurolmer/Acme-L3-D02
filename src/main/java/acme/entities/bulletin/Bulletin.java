@@ -7,9 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Past;
-import javax.validation.constraints.Length;
+import javax.validation.constraints.PastOrPresent;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
@@ -23,19 +23,19 @@ public class Bulletin extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	@Past
+	@PastOrPresent
 	@Temporal(TemporalType.TIME)
 	protected Date				moment;
 
 	@NotBlank
-	@Size(max = 101)
+	@Length(max = 101)
 	protected String			title;
 
 	@NotBlank
 	@Length(max = 101)
 	protected String			message;
 
-	protected CriticalType		critical;
+	protected Boolean			critical;
 
 	@URL
 	protected String			optionalLink;
