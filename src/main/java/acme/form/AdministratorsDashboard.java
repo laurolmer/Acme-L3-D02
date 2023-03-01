@@ -42,4 +42,9 @@ public class AdministratorsDashboard extends AbstractForm {
 	private double				minNotesInLast10Weeks;
 	private double				maxNotesInLast10Weeks;
 	private double				devNotesInLast10Weeks;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
+
 }
