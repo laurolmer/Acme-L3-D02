@@ -1,12 +1,13 @@
 
 package acme.entities.sessionsPracticum;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -29,27 +30,28 @@ public class SessionsPracticum extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 	@NotBlank
 	@Length(max = 75)
-	protected String title;
+	protected String			title;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String abstractt;
+	protected String			abstractt;
 
 	@NotNull
 	@Temporal(TemporalType.DATE)
-	protected Date startDate;
+	protected Date				startDate;
 
 	@NotNull
 	@Temporal(TemporalType.DATE)
-	protected Date finishDate;
-	
+	protected Date				finishDate;
+
 	@URL
-	protected String link;
-	
+	protected String			link;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
 
+	@Valid
 	@ManyToOne()
 	private Practicum			practicum;
 }
