@@ -7,7 +7,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -30,15 +29,15 @@ public class Tutorial extends AbstractEntity {
 	protected String			supervisor;
 
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	protected String			title;
 
 	@NotBlank
-	@Size(max = 101)
-	protected String			abstractt;
+	@Length(max = 100)
+	protected String			abstractTutorial;
 
 	@NotBlank
-	@Size(max = 101)
+	@Length(max = 100)
 	protected ArrayList<String>	goals;
 
 	protected Integer			totalTime;
@@ -46,5 +45,8 @@ public class Tutorial extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+	//@Valid
+	//@OneToMany(mappedBy = "tutorial")
+	//protected Collection<Session>	sessions;
 
 }

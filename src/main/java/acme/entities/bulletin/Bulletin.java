@@ -1,7 +1,7 @@
 
 package acme.entities.bulletin;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
@@ -28,11 +28,11 @@ public class Bulletin extends AbstractEntity {
 	protected Date				moment;
 
 	@NotBlank
-	@Length(max = 101)
+	@Length(max = 100)
 	protected String			title;
 
 	@NotBlank
-	@Length(max = 101)
+	@Length(max = 100)
 	protected String			message;
 
 	protected Boolean			critical;
