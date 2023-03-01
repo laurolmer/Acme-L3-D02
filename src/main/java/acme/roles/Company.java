@@ -2,6 +2,8 @@
 package acme.roles;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -13,7 +15,7 @@ import acme.framework.data.AbstractRole;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
+@Entity(name = "company")
 @Getter
 @Setter
 public class Company extends AbstractRole {
@@ -42,5 +44,9 @@ public class Company extends AbstractRole {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+
+	@Valid
+	@OneToMany(mappedBy = "company")
+	private static Company		company;
 
 }
