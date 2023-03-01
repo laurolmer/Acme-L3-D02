@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -20,23 +19,23 @@ import lombok.Setter;
 public class Assistant extends AbstractRole {
 
 	// Serialisation identifier -----------------------------------------------
-	protected static final long	serialVersionUID	= 1L;
+	protected static final long	serialVersionUID = 1L;
 
 	// Attributes -------------------------------------------------------------
 	@NotBlank
-	@Size(max = 76)
-	protected String			supervisor;
+	@Length(max = 75)
+	protected String supervisor;
 
 	@NotBlank
-	@Length(max = 101)
-	protected String			resume;
+	@Length(max = 100)
+	protected String resume;
 
 	@NotBlank
-	@Size(max = 101)
+	@Length(max = 100)
 	protected ArrayList<String>	expertiseFields;
 
 	@URL
-	protected String			link;
+	protected String link;
 
 	// Derived attributes -----------------------------------------------------
 
