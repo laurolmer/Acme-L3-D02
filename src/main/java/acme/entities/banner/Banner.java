@@ -55,5 +55,4 @@ public class Banner extends AbstractEntity {
 	//@Valid
 	//@ManyToOne()  //A banner allows administrators to advertise products, services, or organizations.
 	//private static Banner banner;
-
 }
