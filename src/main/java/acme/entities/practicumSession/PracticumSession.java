@@ -1,5 +1,5 @@
 
-package acme.entities.sessionsPracticum;
+package acme.entities.practicumSession;
 
 import java.util.Date;
 
@@ -19,10 +19,10 @@ import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity(name = "sessionsPracticum")
+@Entity
 @Getter
 @Setter
-public class SessionsPracticum extends AbstractEntity {
+public class PracticumSession extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 	private static final long	serialVersionUID	= 1L;
@@ -34,7 +34,7 @@ public class SessionsPracticum extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			abstractt;
+	protected String			abstractSession;
 
 	@NotNull
 	@Temporal(TemporalType.DATE)
@@ -52,6 +52,7 @@ public class SessionsPracticum extends AbstractEntity {
 	// Relationships ----------------------------------------------------------
 
 	@Valid
-	@ManyToOne()
+	@NotNull
+	@ManyToOne(optional = false)
 	private Practicum			practicum;
 }

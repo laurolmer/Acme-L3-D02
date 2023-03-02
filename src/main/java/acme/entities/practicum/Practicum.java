@@ -1,13 +1,11 @@
 
 package acme.entities.practicum;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -17,52 +15,48 @@ import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
-import acme.entities.sessionsPracticum.SessionsPracticum;
 import acme.framework.data.AbstractEntity;
 import acme.roles.Company;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity(name = "practicum")
+@Entity
 @Getter
 @Setter
 public class Practicum extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
-	protected static final long				serialVersionUID	= 1L;
+	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
-	protected String						code;
+	protected String			code;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String						title;
+	protected String			title;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String						abstractt;
+	protected String			abstractPracticum;
 
 	@NotBlank
 	@Length(max = 100)
-	protected ArrayList<String>				goals;
+	protected String			goals;
 
 	@NotNull
 	@Temporal(TemporalType.TIME)
-	protected Date							estimedTotalTime; // computed from sessions plus/minus 10%
+	protected Date				estimedTotalTime; // computed from sessions plus/minus 10%
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
 
 	@Valid
-	@OneToMany(mappedBy = "practicum")
-	private static List<SessionsPracticum>	sessionsPracticum;
-
-	@Valid
-	@OneToMany(mappedBy = "practicum")
-	private static Company					company;
+	@NotNull
+	@ManyToOne(optional = false)
+	protected Company			company;
 
 }

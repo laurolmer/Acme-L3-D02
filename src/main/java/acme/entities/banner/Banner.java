@@ -17,7 +17,7 @@ import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity(name = "banenr")
+@Entity
 @Getter
 @Setter
 public class Banner extends AbstractEntity {
@@ -51,8 +51,4 @@ public class Banner extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
-
-	//@Valid
-	//@ManyToOne()  //A banner allows administrators to advertise products, services, or organizations.
-	//private static Banner banner;
 }
