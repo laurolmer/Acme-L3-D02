@@ -19,26 +19,23 @@ import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity(name = "session")
+@Entity
 @Getter
 @Setter
-public class Session extends AbstractEntity {
+public class TutorialSession extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 	@NotBlank
-	@NotNull
 	@Length(max = 75)
 	protected String			title;
 
 	@NotBlank
-	@NotNull
 	@Length(max = 100)
 	protected String			abstractSession;
 
-	@NotBlank
 	@NotNull
 	protected SessionType		sessionType;
 
@@ -63,6 +60,7 @@ public class Session extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	protected Tutorial			tutorial;

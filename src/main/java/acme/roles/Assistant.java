@@ -27,17 +27,14 @@ public class Assistant extends AbstractRole {
 
 	// Attributes -------------------------------------------------------------
 	@NotBlank
-	@NotNull
 	@Length(max = 75)
 	protected String				supervisor;
 
 	@NotBlank
-	@NotNull
 	@Length(max = 100)
 	protected String				resume;
 
 	@NotBlank
-	@NotNull
 	@Length(max = 100)
 	protected String				expertiseFields;
 
@@ -47,6 +44,7 @@ public class Assistant extends AbstractRole {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+	@NotNull
 	@Valid
 	@OneToMany(mappedBy = "assistant")
 	protected Collection<Tutorial>	tutorials;
