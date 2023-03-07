@@ -1,5 +1,5 @@
 
-package acme.entities.workbook;
+package acme.entities.activity;
 
 import java.util.Date;
 
@@ -22,7 +22,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Workbook extends AbstractEntity {
+public class Activity extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 	protected static final long	serialVersionUID	= 1L;
@@ -37,7 +37,7 @@ public class Workbook extends AbstractEntity {
 	@Length(max = 100)
 	protected String			summary;
 
-	@NotBlank
+	@NotNull
 	protected ActivityType		activityType;
 
 	@NotNull
@@ -56,7 +56,7 @@ public class Workbook extends AbstractEntity {
 	// Relationships ----------------------------------------------------------
 	@Valid
 	@NotNull
-	@ManyToOne()
-	protected Enrolment			activities;
+	@ManyToOne(optional = false)
+	protected Enrolment			enrolment;
 
 }
