@@ -4,6 +4,7 @@ package acme.form;
 import java.util.Map;
 
 import acme.framework.data.AbstractForm;
+import acme.framework.data.AbstractRole;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,39 +13,24 @@ import lombok.Setter;
 public class AdministratorsDashboard extends AbstractForm {
 	// Serialisation identifier -----------------------------------------------
 
-	protected static final long	serialVersionUID	= 1L;
+	protected static final long			serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	// Total number of principals with each role.
-	private Integer				numOfAssistants;
-	private Integer				numOfAuditors;
-	private Integer				numOfCompanies;
-	private Integer				numOfConsumers;
-	private Integer				numOfProviders;
-	private Integer				numOfLecturers;
+	private Map<AbstractRole, Integer>	totalUsers;
 
-	// Ratio of peeps with both an email address and a link.
-	private double				linkAndEmailPeepsRatio;
+	// Ratio of PEEPS with both an email address and a link.
+	private double						linkAndEmailPeepsRatio;
 
-	// Ratios of critical and non-critical bulletins.
-	private double				criticalBulletinsRatio;
-	private double				nonCriticalBulletinsRatio;
+	// Ratios of critical and non-critical BULLETINS.
+	private double						criticalBulletinsRatio;
+	private double						nonCriticalBulletinsRatio;
 
-	// Average, minimum, maximum, and standard deviation of the budget in the offers grouped by currency.
-	private Map<String, Double>	avgBudgetByCurrency;
-	private Map<String, Double>	minBudgetByCurrency;
-	private Map<String, Double>	maxBudgetByCurrency;
-	private Map<String, Double>	devBudgetByCurrency;
+	// Average, minimum, maximum, and standard deviation of the budget in the OFFERS grouped by currency.
+	private Statistic					budgetByCurrencyOfferData;
 
-	// Average, minimum, maximum, and standard deviation of the number of notes posted over the last 10 weeks.
-	private double				avgNotesInLast10Weeks;
-	private double				minNotesInLast10Weeks;
-	private double				maxNotesInLast10Weeks;
-	private double				devNotesInLast10Weeks;
-
-	// Derived attributes -----------------------------------------------------
-
-	// Relationships ----------------------------------------------------------
+	// Average, minimum, maximum, and standard deviation of the number of NOTES posted over the last 10 weeks.
+	private Statistic					notesInLast10WeeksData;
 
 }
