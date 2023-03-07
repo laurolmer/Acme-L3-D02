@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -23,7 +23,7 @@ public class Bulletin extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	@Past
+	@PastOrPresent
 	@Temporal(TemporalType.TIME)
 	protected Date				moment;
 
@@ -35,7 +35,7 @@ public class Bulletin extends AbstractEntity {
 	@Length(max = 100)
 	protected String			message;
 
-	protected CriticalType		critical;
+	protected Boolean			critical;
 
 	@URL
 	protected String			optionalLink;
