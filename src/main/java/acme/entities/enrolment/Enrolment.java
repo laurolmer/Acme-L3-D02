@@ -4,7 +4,7 @@ package acme.entities.enrolment;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -27,7 +27,6 @@ public class Enrolment extends AbstractEntity {
 	protected static final long	serialVersionUID	= 1L;
 
 	@NotBlank
-	@NotNull
 	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
 	protected String			code;
 
@@ -45,7 +44,7 @@ public class Enrolment extends AbstractEntity {
 
 	@Valid
 	@NotNull
-	@OneToOne
+	@ManyToOne(optional = false)
 	protected Student			student;
 
 }
