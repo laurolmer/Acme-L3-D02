@@ -18,7 +18,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Audit_Records extends AbstractEntity {
+public class AuditRecord extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
@@ -35,7 +35,7 @@ public class Audit_Records extends AbstractEntity {
 
 	@PastOrPresent
 	//Falta la custom @ asi que aun no se puede.	
-	@NotBlank
+	@NotNull
 	protected Date				period;
 
 	@URL
