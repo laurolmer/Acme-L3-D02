@@ -1,3 +1,4 @@
+
 package acme.entities.peeps;
 
 import java.util.Date;
@@ -23,34 +24,30 @@ import lombok.Setter;
 public class Peep extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
-	protected static final long		serialVersionUID	= 1L;
+	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-	@NotBlank
 	@NotNull
 	@PastOrPresent
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date moment;
-	
-	@NotNull
+	protected Date				moment;
+
 	@NotBlank
 	@Length(max = 75)
-	protected String title;
-	
-	@NotNull
+	protected String			title;
+
 	@NotBlank
 	@Length(max = 75)
-	protected String nick;
-	
-	@NotNull
+	protected String			nick;
+
 	@NotBlank
 	@Length(max = 100)
-	protected String message;
-	
+	protected String			message;
+
 	@URL
-	protected String link;
-	
+	protected String			link;
+
 	@Email
-	protected String email;
-	
+	protected String			email;
+
 }
