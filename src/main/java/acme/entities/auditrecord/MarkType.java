@@ -1,5 +1,5 @@
 
-package acme.entities.audit_records;
+package acme.entities.auditrecord;
 
 public enum MarkType {
 	APLUS, A, B, C, F, FMINUS
