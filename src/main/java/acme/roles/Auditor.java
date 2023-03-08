@@ -24,13 +24,13 @@ public class Auditor extends AbstractRole {
 
 	@NotBlank
 	@Length(max = 25)
-	protected String			pId;
+	protected String			professionalId;
 
 	@NotBlank
 	@Length(max = 100)
 	protected String			certifications;
 
 	@URL
-	protected String			optional;
+	protected String			link;
 
 }
