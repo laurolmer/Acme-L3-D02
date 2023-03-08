@@ -11,7 +11,7 @@ import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
-import acme.entities.audit_records.Audit_Records;
+import acme.entities.auditrecord.AuditRecord;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,28 +21,28 @@ import lombok.Setter;
 @Setter
 public class Audit extends AbstractEntity {
 
-	protected static final long		serialVersionUID	= 1L;
+	protected static final long	serialVersionUID	= 1L;
 
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
-	protected String				code;
+	protected String			code;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String				conclusion;
+	protected String			conclusion;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String				strong_points;
+	protected String			strong_points;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String				weak_points;
+	protected String			weak_points;
 
 	//Relaciones
 
 	@OneToMany
-	protected List<Audit_Records>	audit_records;
+	protected List<AuditRecord>	audit_records;
 
 }
