@@ -28,11 +28,11 @@ public class Company extends AbstractRole {
 
 	@NotBlank
 	@Length(max = 21)
-	protected Integer			VAT;
+	protected String			VAT;
 
 	@NotBlank
 	@Length(max = 100)
-	protected Integer			summary;
+	protected String			summary;
 
 	@URL
 	protected String			link;
