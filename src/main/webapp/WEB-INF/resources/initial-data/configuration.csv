@@ -1,0 +1,4 @@
+key, defaultCurrency, acceptedCurrencies
+1, EUR, EUR
+2, EUR, USD
+3, EUR, GBP
