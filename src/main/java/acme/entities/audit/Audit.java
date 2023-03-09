@@ -11,7 +11,7 @@ import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
-import acme.entities.auditrecord.AuditRecord;
+import acme.entities.auditRecord.AuditRecord;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;

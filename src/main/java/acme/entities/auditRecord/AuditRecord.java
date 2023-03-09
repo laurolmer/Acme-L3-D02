@@ -11,14 +11,13 @@ import javax.validation.constraints.PastOrPresent;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class AuditRecord extends AbstractEntity {
+public class AuditRecord {
 
 	protected static final long	serialVersionUID	= 1L;
 
@@ -35,7 +34,7 @@ public class AuditRecord extends AbstractEntity {
 
 	@PastOrPresent
 	//Falta la custom @ asi que aun no se puede.	
-	@NotNull
+	@NotBlank
 	protected Date				period;
 
 	@URL
