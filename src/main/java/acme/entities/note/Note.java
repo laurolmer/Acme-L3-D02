@@ -1,19 +1,18 @@
 
-package acme.entities.offer;
+package acme.entities.note;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,34 +20,30 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Offer extends AbstractEntity {
+public class Note extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	@PastOrPresent
 	@NotNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIME)
 	protected Date				instantiationMoment;
 
+	@NotBlank
 	@Length(max = 75)
-	@NotBlank
-	protected String			heading;
+	protected String			title;
 
+	@NotBlank
+	@Length(max = 75)
+	protected String			author;
+
+	@NotBlank
 	@Length(max = 100)
-	@NotBlank
-	protected String			summary;
+	protected String			message;
 
-	@NotNull
-	protected Money				price;
-
-	@NotNull
-	@Temporal(TemporalType.DATE)
-	protected Date				availabilityPeriodStart;
-
-	@NotNull
-	@Temporal(TemporalType.DATE)
-	protected Date				availabilityPeriodEnd;
+	@Email
+	protected String			emailAddress;
 
 	@URL
-	protected String			link;
+	protected String			url;
+
 }

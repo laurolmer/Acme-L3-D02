@@ -1,13 +1,15 @@
 
 package acme.form;
 
+import javax.validation.constraints.NotNull;
+
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
 @Getter
-public class AssistantsDashboard extends AbstractForm {
+@Setter
+public class Statistic extends AbstractForm {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -15,8 +17,15 @@ public class AssistantsDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	private Statistic			sessionTime;
+	@NotNull
+	int							count;
 
-	private Statistic			tutorialTime;
+	Double						average;
+
+	Double						minimum;
+
+	Double						maximum;
+
+	Double						deviation;
 
 }

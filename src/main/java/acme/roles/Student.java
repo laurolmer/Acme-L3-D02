@@ -1,8 +1,6 @@
 
 package acme.roles;
 
-import java.util.ArrayList;
-
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
@@ -28,11 +26,11 @@ public class Student extends AbstractRole {
 
 	@NotBlank
 	@Length(max = 100)
-	protected ArrayList<String>	strongFeatures;
+	protected String			strongFeatures;
 
 	@NotBlank
 	@Length(max = 100)
-	protected ArrayList<String>	weakFeatures;
+	protected String			weakFeatures;
 
 	@URL
 	protected String			link;
