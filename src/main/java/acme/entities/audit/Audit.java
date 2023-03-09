@@ -34,15 +34,15 @@ public class Audit extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			strong_points;
+	protected String			strongPoints;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			weak_points;
+	protected String			weakPoints;
 
 	//Relaciones
 
 	@OneToMany
-	protected List<AuditRecord>	audit_records;
+	protected List<AuditRecord>	auditRecords;
 
 }
