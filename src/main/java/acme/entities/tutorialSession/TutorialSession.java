@@ -2,6 +2,7 @@
 package acme.entities.tutorialSession;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -40,29 +41,39 @@ public class TutorialSession extends AbstractEntity {
 	protected SessionType		sessionType;
 
 	@NotNull
-	//@CustomConstraint
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				startPeriod;
 
-	@NotNull
 	//@CustomConstraint finishperiod - startperiod >= 1 horas && <= 5 horas
+
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				finishPeriod;
 
 	@NotNull
-	//@CustomConstraint creationMoment >= 1 horas 
+	//@CustomConstraint creationMoment >= 1 day 
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				creationMoment;
 
 	@URL
 	protected String			link;
 
+
 	// Derived attributes -----------------------------------------------------
+	// El tiempo total de un tutorial se calcula con la suma de todos las sesiones pertenecientes a ese tutorial.
+	protected int totalTutorialTime(final List<TutorialSession> sessions, final Tutorial tuto) {
+		int tutorialTime = 0;
+		for (final TutorialSession session : sessions)
+			if (session.getTutorial().equals(tuto))
+				tutorialTime += session.getFinishPeriod().getHours() - session.getStartPeriod().getHours();
+		return tutorialTime;
+	}
+
 
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	protected Tutorial			tutorial;
+	protected Tutorial tutorial;
 
 }
