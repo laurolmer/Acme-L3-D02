@@ -1,0 +1,4 @@
+key,code,title,abstract-tutorial,goals,total-time,key:assistant
+tutorial-01,"TUT001","How to publish an offert.","In this tutorial it is explained by an expert how to create an offer and how to edit and delete them","goal-1, goal-2, goal-3",10,assistant-01
+tutorial-02,"T002","This is going to be as long as it reaches 75 chars proving the restriction.","Abstract tutorial 2","goal-04,goal-5,goal-6,goal-7,goal-8,goal-9,goal-10,goal-11,goal-12,goal-13,goal-14,goal-15,goal-16.",15,assistant-02
+tutorial-03,"TU003","How to log in.","Abstract Tutorial 3","goal-1,goal-17",7,assistant-02
