@@ -1,17 +1,13 @@
 
 package acme.entities.audit;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
-import acme.entities.auditRecord.AuditRecord;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,10 +35,5 @@ public class Audit extends AbstractEntity {
 	@NotBlank
 	@Length(max = 100)
 	protected String			weak_points;
-
-	//Relaciones
-
-	@OneToMany
-	protected List<AuditRecord>	audit_records;
 
 }
