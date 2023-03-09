@@ -11,13 +11,14 @@ import javax.validation.constraints.PastOrPresent;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class AuditRecord {
+public class AuditRecord extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
