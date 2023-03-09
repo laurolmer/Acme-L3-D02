@@ -1,4 +1,3 @@
 key,username,password,identity,enabled
 user-account-assistant-01,assistant1,assistant1,"UserIdentity{name: 'Assistant1', surname: 'One', email: 'assistant1@mail.com'}",true
 user-account-assistant-02,assistant2,assistant2,"UserIdentity{name: 'Assistant2', surname: 'Two', email: 'assistant2@mail.com'}",true
-user-account-assistant-03,assistant3,assistant3,"UserIdentity{name: 'Assistant3', surname: 'Three', email: 'assistant3@mail.com'}",true

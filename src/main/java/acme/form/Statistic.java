@@ -1,15 +1,12 @@
 
 package acme.form;
 
-import javax.validation.constraints.NotNull;
-
-import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Statistic extends AbstractForm {
+public class Statistic {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -17,7 +14,6 @@ public class Statistic extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotNull
 	int							count;
 
 	Double						average;
