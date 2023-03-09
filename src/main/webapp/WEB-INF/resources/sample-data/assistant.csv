@@ -1,4 +1,3 @@
 key,supervisor,resume,expertise-fields,link,key:userAccount
-assistant-01,supervisor 1,"Nombre: Laura; apellidos: Roldán Merat; correo: laurolmer@us.es; titulación: Grado en Ing. Software.","Ingeniería, Desarrollo de software, Marketing-publicidad, Finanzas y contabilidad, Recursos humanos.",https://es.linkedin.com,user-account-assistant-01
-assistant-02,supervisor 2,"Nombre completo: Iván Sánchez San José; correo: ivasansan1@us.es; titulación: Grado en Ing. Software","Producción audiovisual y multimedia",null,user-account-assistant-02
-assistant-03,"Este supervisor llegará a los 075 caracteres ya que lo pide la restricción.","Nombre completo: Alberto Perea León; correo: albperleo@us.es; titulación: Master en Ciberseguridad.","Ciencias ambientales, Diseño gráfico y web, Investigación y desarrollo",https://es.linkedin.com,user-account-assistant-03
+assistant-01,"Supervisor 1.","Resume 1.","Expertise field 1.",https://es.linkedin.com,user-account-assistant-01
+assistant-02,"Supervisor 2.","Resume 2.","Expertise field 2.",null,user-account-assistant-02
