@@ -40,7 +40,7 @@ public class PracticumSession extends AbstractEntity {
 	@Temporal(TemporalType.DATE)
 	protected Date				startDate;
 
-	@NotNull
+	@NotNull								//(at least one week ahead, at least one week long)
 	@Temporal(TemporalType.DATE)
 	protected Date				finishDate;
 
