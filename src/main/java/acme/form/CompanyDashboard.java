@@ -4,7 +4,11 @@ package acme.form;
 import java.util.List;
 
 import acme.framework.data.AbstractForm;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class CompanyDashboard extends AbstractForm {
 	// Serialisation identifier -----------------------------------------------
 
@@ -12,18 +16,15 @@ public class CompanyDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	//Numero Total de prácticas
+	//total number of practica regarding theory or hands-on courses grouped by month during the last year
+	//[0,1,2,3,4,5,6,7,8] 0=Enero; 1=Febrero; 2=Marzo;....
 	private List<Integer>		numTotalPractica;
 
-	private Double				avgSessionLength;
-	private Double				devSessionLength;
-	private Double				minSessionLength;
-	private Double				maxSessionLength;
+	// Average, deviation, minimum, and maximum time of his or her sessions.
+	private Statistic			SessionLength;
 
-	private Double				avgPracticaLength;
-	private Double				devPracticaLength;
-	private Double				minPracticaLength;
-	private Double				maxPracticaLength;
+	// Average, deviation, minimum, and maximum time of his or her sessions.
+	private Statistic			PracticaLength;
 
 	// Derived attributes -----------------------------------------------------
 
