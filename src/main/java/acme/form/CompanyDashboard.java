@@ -1,8 +1,7 @@
 
 package acme.form;
 
-import java.time.Month;
-import java.util.Map;
+import java.util.List;
 
 import acme.framework.data.AbstractForm;
 
@@ -13,17 +12,18 @@ public class CompanyDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	private int					totalPractica;
+	//Numero Total de prácticas
+	private List<Integer>		numTotalPractica;
 
-	private Map<Month, Double>	avgSessionLength;
-	private Map<Month, Double>	devSessionLength;
-	private Map<Month, Double>	minSessionLength;
-	private Map<Month, Double>	maxSessionLength;
+	private Double				avgSessionLength;
+	private Double				devSessionLength;
+	private Double				minSessionLength;
+	private Double				maxSessionLength;
 
-	private Map<Month, Double>	avgPracticaLength;
-	private Map<Month, Double>	devPracticaLength;
-	private Map<Month, Double>	minPracticaLength;
-	private Map<Month, Double>	maxPracticaLength;
+	private Double				avgPracticaLength;
+	private Double				devPracticaLength;
+	private Double				minPracticaLength;
+	private Double				maxPracticaLength;
 
 	// Derived attributes -----------------------------------------------------
 
