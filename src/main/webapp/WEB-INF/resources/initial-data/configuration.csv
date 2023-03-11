@@ -1,0 +1,2 @@
+key, defaultCurrency, acceptedCurrencies
+currency-01, EUR, "EUR, USD, GBP"
