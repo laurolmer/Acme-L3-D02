@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
@@ -25,6 +26,7 @@ public class Bulletin extends AbstractEntity {
 
 	@PastOrPresent
 	@Temporal(TemporalType.TIME)
+	@NotNull
 	protected Date				moment;
 
 	@NotBlank
@@ -35,6 +37,7 @@ public class Bulletin extends AbstractEntity {
 	@Length(max = 100)
 	protected String			message;
 
+	@NotNull
 	protected Boolean			critical;
 
 	@URL
