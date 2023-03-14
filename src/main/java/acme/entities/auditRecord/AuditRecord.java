@@ -38,8 +38,12 @@ public class AuditRecord extends AbstractEntity {
 
 	@PastOrPresent
 	//Falta la custom @ asi que aun no se puede.	
-	@NotBlank
-	protected Date				period;
+	@NotNull
+	protected Date				periodStart;
+
+	@PastOrPresent
+	@NotNull
+	protected Date				periodFin;
 
 	@URL
 	protected String			link;
