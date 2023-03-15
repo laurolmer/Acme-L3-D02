@@ -44,7 +44,7 @@ public class Practicum extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 	@NotNull
-	protected Double			estimedTotalTime; // computed from sessions plus/minus 10%
+	protected Double			estimedTotalTimeInHours; // computed from sessions plus/minus 10%
 
 	//Falta la función derivada
 

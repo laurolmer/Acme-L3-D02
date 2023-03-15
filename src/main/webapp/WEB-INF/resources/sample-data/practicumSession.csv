@@ -1,15 +1,15 @@
-key,title, abstractSession, startDate, finishDate, link, key:practicum
-PracticumSession-01, "T", abstractSession-01, 2024/01/01 08:00, 2024/01/07 09:00, https://www.google.com, practicum-01
-PracticumSession-02, "Ti", abstractSession-02, 2024/02/01 08:00, 2024/02/07 09:00, null, practicum-02
-PracticumSession-03, "Probando un titulo que tenga como máximo 74 caracteres para el campo title", abstractSession-03, 2024/03/01 08:00, 2024/03/07 09:00, https://www.google.com, practicum-03
-PracticumSession-04, "Probando un titulo que tenga como máximo 75 caracteres para el campo title.", abstractSession-04, 2024/04/01 08:00, 2024/04/07 09:00, null, practicum-04
-PracticumSession-05, "サンプルテキスト", abstractSession-05, 2024/05/01 08:00, 2024/05/07 09:00, https://www.google.com, practicum-05
-PracticumSession-06, "<title>ExampleHTML</title>", abstractSession-06, 2024/06/01 08:00, 2024/06/07 09:00, https://www.google.com, practicum-06
-PracticumSession-07, "<script>alert('exampleJS');</script>", abstractSession-07, 2024/07/01 08:00, 2024/07/07 09:00, https://www.google.com, practicum-07
-PracticumSession-08, "title-01", "A", 2024/08/01 08:00, 2024/08/07 09:00, null, practicum-08
-PracticumSession-09, "title-02", "AA", 2024/09/01 08:00, 2024/09/07 09:00, null, practicum-09
-PracticumSession-10, "title-03", ""Esto es un resumen de máximo 99 caracteres para abstractPracticum el campo summary del archivo csv."", 2024/10/01 08:00, 2024/10/07 09:00, null, practicum-10
-PracticumSession-11, "title-04", "Esto es un resumen de máximo 100 caracteres para abstractPracticum el campo summary del archivo csv", 2024/11/01 08:00, 2024/11/07 09:00, null, practicum-11
-PracticumSession-12, "title-05", "サンプルテキスト", 2024/12/01 08:00, 2024/12/07 09:00, null, practicum-12
-PracticumSession-13, "title-06", "<title>ExampleHTML</title>", 2025/01/01 08:00, 2025/01/07 09:00, null, practicum-13
-PracticumSession-14, "title-07", "<script>alert('exampleJS');</script>", 2025/02/01 08:00, 2025/02/07 09:00, null, practicum-14
+key,title,abstract-session,start-date,finish-date,link,key:practicum
+PracticumSession-01,"T",abstractSession-01,2024/01/01 08:00,2024/01/07 09:00,https://www.google.com,practicum-01
+PracticumSession-02,"Ti",abstractSession-02,2024/02/01 08:00,2024/02/07 09:00,null,practicum-02
+PracticumSession-03,"Probando un titulo que tenga como máximo 74 caracteres para el campo title",abstractSession-03,2024/03/01 08:00,2024/03/07 09:00,https://www.google.com,practicum-03
+PracticumSession-04,"Probando un titulo que tenga como máximo 75 caracteres para el campo title.",abstractSession-04,2024/04/01 08:00,2024/04/07 09:00,null,practicum-04
+PracticumSession-05,"サンプルテキスト",abstractSession-05, 2024/05/01 08:00, 2024/05/07 09:00,https://www.google.com,practicum-05
+PracticumSession-06,"<title>ExampleHTML</title>",abstractSession-06,2024/06/01 08:00,2024/06/07 09:00, https://www.google.com,practicum-06
+PracticumSession-07,"<script>alert('exampleJS');</script>",abstractSession-07,2024/07/01 08:00,2024/07/07 09:00,https://www.google.com,practicum-07
+PracticumSession-08,"title-01","A",2024/08/01 08:00,2024/08/07 09:00,null,practicum-08
+PracticumSession-09,"title-02","AA",2024/09/01 08:00,2024/09/07 09:00,null,practicum-09
+PracticumSession-10,"title-03","Esto es un resumen de máximo 99 caracteres para abstractPracticum el campo summary del archivo csv.",2024/10/01 08:00,2024/10/07 09:00,null,practicum-10
+PracticumSession-11,"title-04","Esto es un resumen de máximo 100 caracteres para abstractPracticum el campo summary del archivo csv",2024/11/01 08:00,2024/11/07 09:00,null,practicum-11
+PracticumSession-12,"title-05","サンプルテキスト",2024/12/01 08:00,2024/12/07 09:00, null,practicum-12
+PracticumSession-13,"title-06","<title>ExampleHTML</title>",2025/01/01 08:00,2025/01/07 09:00,null,practicum-13
+PracticumSession-14,"title-07","<script>alert('exampleJS');</script>",2025/02/01 08:00,2025/02/07 09:00,null,practicum-14
