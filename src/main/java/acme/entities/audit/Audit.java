@@ -1,18 +1,18 @@
 
 package acme.entities.audit;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
-import acme.entities.auditRecord.AuditRecord;
 import acme.framework.data.AbstractEntity;
+import acme.roles.Auditor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +25,7 @@ public class Audit extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{1,3}[0-9]{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}[0-9]{3}$")
 	protected String			code;
 
 	@NotBlank
@@ -34,15 +34,15 @@ public class Audit extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			strong_points;
+	protected String			strongPoints;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			weak_points;
+	protected String			weakPoints;
 
 	//Relaciones
-
-	@OneToMany
-	protected List<AuditRecord>	audit_records;
-
+	@Valid
+	@NotNull
+	@ManyToOne(optional = false)
+	protected Auditor			auditor;
 }
