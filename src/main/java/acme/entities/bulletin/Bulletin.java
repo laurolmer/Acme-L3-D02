@@ -25,7 +25,7 @@ public class Bulletin extends AbstractEntity {
 	protected static final long	serialVersionUID	= 1L;
 
 	@PastOrPresent
-	@Temporal(TemporalType.TIME)
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date				moment;
 

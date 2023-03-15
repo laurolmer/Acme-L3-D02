@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -33,17 +35,19 @@ public class AuditRecord extends AbstractEntity {
 	@Length(max = 100)
 	protected String			assesment;
 
-	@NotNull
-	protected MarkType			mark;
-
 	@PastOrPresent
+	@Temporal(TemporalType.TIMESTAMP)
 	//Falta la custom @ asi que aun no se puede.	
 	@NotNull
 	protected Date				periodStart;
 
 	@PastOrPresent
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date				periodFin;
+
+	@NotNull
+	protected MarkType			mark;
 
 	@URL
 	protected String			link;
