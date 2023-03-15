@@ -2,8 +2,8 @@ key,code,title,course-abstract,course-type,retail-price,link,key:lecturer
 course-01,A111,title-01,courseAbstract-01,THEORY_COURSE,EUR 20.00,https:\\www.course-01.com,lecturer-01
 course-02,BB222,title-02,courseAbstract-02,HANDS_ON,USD 35.25,https:\\www.course-02.com,lecturer-02
 course-03,CCC333,title-03,courseAbstract-03,THEORY_COURSE,GBP 28.50,https:\\www.course-03.com,lecturer-01
-course-04,DDD444,T,courseAbstract-04,HANDS_ON,THB 12345.67,https:\\www.course-04.com,lecturer-04
-course-05,EEE555,Ti,courseAbstract-05,THEORY_COURSE,BGP 1234.56,https:\\www.course-05.com,lecturer-05
+course-04,DDD444,T,courseAbstract-04,HANDS_ON,THB 12345.67,https:\\www.course-04.com,lecturer-01
+course-05,EEE555,Ti,courseAbstract-05,THEORY_COURSE,BGP 1234.56,https:\\www.course-05.com,lecturer-01
 course-06,FFF666,Probando un titulo que tenga como máximo 74 caracteres para el campo title,courseAbstract-06,HANDS_ON,USD 47.90,https:\\www.course-06.com,lecturer-01
 course-07,GGG777,Probando un titulo que tenga como máximo 75 caracteres para el campo title.,courseAbstract-07,THEORY_COURSE,EUR 17.80,https:\\www.course-07.com,lecturer-02
 course-08,HHH888,サンプルテキスト,courseAbstract-08,HANDS_ON,CAD 99.99,https:\\www.course-08.com,lecturer-01
@@ -19,7 +19,7 @@ course-17,SSS777,title-10,<script>alert('exampleJS')</script>,THEORY_COURSE,EUR 
 course-18,TTT333,title-11,courseAbstract-11,HANDS_ON,USD 62.80,https:\\www.course-18.com,lecturer-01
 course-19,UUU333,title-12,courseAbstract-12,THEORY_COURSE,CAD 11.00,https:\\www.course-19.com,lecturer-01
 course-20,VVV333,title-13,courseAbstract-13,HANDS_ON,THB 1999.99,https:\\www.course-20.com,lecturer-02
-course-21,WWW333,title-14,courseAbstract-14,type,EUR 15.25,https:\\www.course-21.com,lecturer-02
-course-22,XXX333,title-15,courseAbstract-15,type,THB 999.20,https:\\www.course-22.com,lecturer-02
-course-23,YYY333,title-16,courseAbstract-16,type,CAD 15.00,https:\\www.course-23.com,lecturer-01
-course-24,ZZZ333,title-17,courseAbstract-17,type,USD 23.60,null,lecturer-01
+course-21,WWW333,title-14,courseAbstract-14,THEORY_COURSE,EUR 15.25,https:\\www.course-21.com,lecturer-02
+course-22,XXX333,title-15,courseAbstract-15,HANDS_ON,THB 999.20,https:\\www.course-22.com,lecturer-02
+course-23,YYY333,title-16,courseAbstract-16,THEORY_COURSE,CAD 15.00,https:\\www.course-23.com,lecturer-01
+course-24,ZZZ333,title-17,courseAbstract-17,HANDS_ON,USD 23.60,null,lecturer-01
