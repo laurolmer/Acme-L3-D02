@@ -21,10 +21,10 @@ public class CompanyDashboard extends AbstractForm {
 	private List<Integer>		numTotalPractica;
 
 	// Average, deviation, minimum, and maximum time of his or her sessions.
-	private Statistic			SessionLength;
+	private Statistic			sessionLength;
 
 	// Average, deviation, minimum, and maximum time of his or her sessions.
-	private Statistic			PracticaLength;
+	private Statistic			practicaLength;
 
 	// Derived attributes -----------------------------------------------------
 
