@@ -8,7 +8,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.PositiveOrZero;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -30,7 +29,7 @@ public class Course extends AbstractEntity {
 	//	Attributes -----------------------------------------
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "^[A-Z]{1,3}\\d{3}$")
+	@Pattern(regexp = "^[A-Z]{1,3}[0-9]{3}$")
 	protected String code;
 
 	@NotBlank
@@ -50,10 +49,11 @@ public class Course extends AbstractEntity {
 	@URL
 	protected String link;
 	
+	protected boolean draftMode;
+	
 //	Derived attributes ------------------------------------
-	@NotNull
-	@PositiveOrZero
-	protected Double estimatedTotalTime;
+
+//	estimatedTotalTime;
 	
 //	Relationships -----------------------------------------
 	@Valid
