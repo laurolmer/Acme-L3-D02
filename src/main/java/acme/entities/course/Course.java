@@ -41,6 +41,7 @@ public class Course extends AbstractEntity {
 	@Length(max = 100)
 	protected String courseAbstract;
 	
+	@NotNull
 	protected CourseType courseType;
 	
 	@NotNull
@@ -50,14 +51,14 @@ public class Course extends AbstractEntity {
 	protected String link;
 	
 //	Derived attributes ------------------------------------
-//	@NotNull
+	@NotNull
 	@PositiveOrZero
 	protected Double estimatedTotalTime;
 	
 //	Relationships -----------------------------------------
 	@Valid
 	@NotNull
-	@ManyToOne
+	@ManyToOne(optional = false)
 	protected Lecturer lecturer;
 	
 }
