@@ -31,7 +31,7 @@ public class Lecture extends AbstractEntity {
 	
 	@NotBlank
 	@Length(max = 100)
-	protected String _abstract;
+	protected String lectureAbstract;
 	
 	//estimated learning time
 	@NotNull
