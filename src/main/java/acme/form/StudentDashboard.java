@@ -1,12 +1,13 @@
 
 package acme.form;
 
+import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
 @Setter
-public class Statistic {
+@Getter
+public class StudentDashboard extends AbstractForm {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -14,14 +15,10 @@ public class Statistic {
 
 	// Attributes -------------------------------------------------------------
 
-	int							count;
+	protected Integer			totalNumTheoryStudent;
 
-	Double						average;
+	protected Statistic			activityPeriod;
 
-	Double						minimum;
-
-	Double						maximum;
-
-	Double						deviation;
+	protected Statistic			enrolmentTime;
 
 }

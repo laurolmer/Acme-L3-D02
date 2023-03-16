@@ -3,8 +3,8 @@ package acme.form;
 
 import java.util.Map;
 
+import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractForm;
-import acme.framework.data.AbstractRole;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,24 +13,23 @@ import lombok.Setter;
 public class AdministratorsDashboard extends AbstractForm {
 	// Serialisation identifier -----------------------------------------------
 
-	protected static final long			serialVersionUID	= 1L;
+	protected static final long		serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	// Total number of principals with each role.
-	private Map<AbstractRole, Integer>	totalUsers;
+	private Map<String, Integer>	totalUsers;
 
 	// Ratio of PEEPS with both an email address and a link.
-	private double						linkAndEmailPeepsRatio;
+	private Double					linkAndEmailPeepsRatio;
 
 	// Ratios of critical and non-critical BULLETINS.
-	private double						criticalBulletinsRatio;
-	private double						nonCriticalBulletinsRatio;
+	private Double					criticalBulletinsRatio;
 
 	// Average, minimum, maximum, and standard deviation of the budget in the OFFERS grouped by currency.
-	private Statistic					budgetByCurrencyOfferData;
+	private Map<Money, Statistic>	budgetByCurrencyOfferData;
 
 	// Average, minimum, maximum, and standard deviation of the number of NOTES posted over the last 10 weeks.
-	private Statistic					notesInLast10WeeksData;
+	private Statistic				notesInLast10WeeksData;
 
 }
