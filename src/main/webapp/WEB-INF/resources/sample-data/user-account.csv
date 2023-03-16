@@ -7,3 +7,5 @@ user-account-lecturer-01,lecturer1,lecturer1,"UserIdentity{name: 'Lecturer1', su
 user-account-lecturer-02,lecturer2,lecturer2,"UserIdentity{name: 'Lecturer2', surname: 'Two', email: 'lecturer2@mail.com'}",true
 user-account-auditor-01,auditor1,auditor1,"UserIdentity{name: 'Auditor1', surname: 'One', email: 'auditor1@mail.com'}",true
 user-account-auditor-02,auditor2,auditor2,"UserIdentity{name: 'Auditor2', surname: 'Two', email: 'auditor2@mail.com'}",true
+user-account-student-01,student1,student1,"UserIdentity{name: 'Student1', surname: 'One', email: 'student1@mail.com'}",true
+user-account-student-02,student2,student2,"UserIdentity{name: 'Student2', surname: 'Two', email: 'student2@mail.com'}",true
