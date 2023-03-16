@@ -3,7 +3,6 @@ package acme.form;
 
 import java.util.Map;
 
-import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,7 +26,7 @@ public class AdministratorsDashboard extends AbstractForm {
 	private Double					criticalBulletinsRatio;
 
 	// Average, minimum, maximum, and standard deviation of the budget in the OFFERS grouped by currency.
-	private Map<Money, Statistic>	budgetByCurrencyOfferData;
+	private Map<String, Statistic>	budgetByCurrencyOfferData;
 
 	// Average, minimum, maximum, and standard deviation of the number of NOTES posted over the last 10 weeks.
 	private Statistic				notesInLast10WeeksData;

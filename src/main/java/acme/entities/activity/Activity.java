@@ -51,21 +51,10 @@ public class Activity extends AbstractEntity {
 	@URL
 	protected String			link;
 
-	// Derived attributes -----------------------------------------------------
-
-
-	protected Integer tiempoTotal() {
-		final long tiempoEnMilisegundos = this.periodEnd.getTime() - this.periodStart.getTime();
-		final int segundos = (int) tiempoEnMilisegundos / 1000;
-		final int horas = segundos / 3600;
-		return horas;
-	}
-
-
 	// Relationships ----------------------------------------------------------
 	@Valid
 	@NotNull
 	@ManyToOne(optional = false)
-	protected Enrolment enrolment;
+	protected Enrolment			enrolment;
 
 }

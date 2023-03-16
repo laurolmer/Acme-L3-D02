@@ -1,4 +1,4 @@
-key,code,conclusion,strongPoints,weakPoints,key:auditor,key:course
+key,code,conclusion,strong-points,weak-points,key:auditor,key:course
 audit-01,A900,texto de prueba,texto de prueba,texto de prueba,auditor-01,course-01
 audit-02,AA900,texto de prueba,texto de prueba,texto de prueba,auditor-01,course-01
 audit-03,AAA900,texto de prueba,texto de prueba,texto de prueba,auditor-01,course-01
