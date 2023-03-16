@@ -1,4 +1,4 @@
-key,subject,assesment,periodStart,periodFin,mark,link,key:audit
+key,subject,assesment,period-start,period-fin,mark,link,key:audit
 auditing-record-01,E,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,audit-01
 auditing-record-02,Es,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,audit-01
 auditing-record-03,La frase contiene 40 caracteres en total,texto de prueba,1990/01/15 09:20,1990/01/15 09:20,APLUS,https://github.com/laurolmer/Acme-L3-D02,audit-01
