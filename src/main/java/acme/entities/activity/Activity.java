@@ -35,17 +35,17 @@ public class Activity extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			summary;
+	protected String			abstractActivity;
 
 	@NotNull
 	protected ActivityType		activityType;
 
 	@NotNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				periodStart;
 
 	@NotNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				periodEnd;
 
 	@URL
@@ -53,10 +53,19 @@ public class Activity extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
+
+	protected Integer tiempoTotal() {
+		final long tiempoEnMilisegundos = this.periodEnd.getTime() - this.periodStart.getTime();
+		final int segundos = (int) tiempoEnMilisegundos / 1000;
+		final int horas = segundos / 3600;
+		return horas;
+	}
+
+
 	// Relationships ----------------------------------------------------------
 	@Valid
 	@NotNull
 	@ManyToOne(optional = false)
-	protected Enrolment			enrolment;
+	protected Enrolment enrolment;
 
 }
