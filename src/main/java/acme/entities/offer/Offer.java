@@ -27,7 +27,7 @@ public class Offer extends AbstractEntity {
 
 	@PastOrPresent
 	@NotNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				instantiationMoment;
 
 	@Length(max = 75)
@@ -42,11 +42,11 @@ public class Offer extends AbstractEntity {
 	protected Money				price;
 
 	@NotNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				availabilityPeriodStart;
 
 	@NotNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				availabilityPeriodEnd;
 
 	@URL

@@ -35,23 +35,21 @@ public class Activity extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			summary;
+	protected String			abstractActivity;
 
 	@NotNull
 	protected ActivityType		activityType;
 
 	@NotNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				periodStart;
 
 	@NotNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				periodEnd;
 
 	@URL
 	protected String			link;
-
-	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
 	@Valid
