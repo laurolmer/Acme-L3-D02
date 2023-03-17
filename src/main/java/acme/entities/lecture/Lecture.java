@@ -7,7 +7,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -35,12 +34,10 @@ public class Lecture extends AbstractEntity {
 	
 	//estimated learning time
 	@NotNull
-	@PastOrPresent
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date startPeriod;
 	
 	@NotNull
-	@PastOrPresent
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date endPeriod;
 	
